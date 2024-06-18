@@ -101,7 +101,7 @@ public class BillsFragment extends Fragment {
                 itemBinding.textViewBillName.setText(bill.getName());
                 itemBinding.textViewBillAmount.setText("Bill Amount: " + String.format("$%.2f", bill.getAmount()));
                 double discountAmount = bill.getAmount() * bill.getDiscount() / 100;
-                itemBinding.textViewBillDiscount.setText("Bill Discount" + String.format("%.2f", bill.getDiscount()) + " (" + String.format("$%.2f", discountAmount) + ")");
+                itemBinding.textViewBillDiscount.setText("Bill Discount: " + String.format("%.0f", bill.getDiscount()) + "% (" + String.format("$%.2f", discountAmount) + ")");
                 itemBinding.textViewTotalBill.setText("Total Bill: " + String.format("$%.2f", bill.getAmount() - discountAmount));
                 SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
                 itemBinding.textViewBillDate.setText(sdf.format(bill.billDate));

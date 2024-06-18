@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity implements
         billsDao = db.billsDao();
         billsDao.deleteAll();
         billsDao.insertAll(
-                new Bill("test1", "groceries", new Date(), 15.0, 27),
-                new Bill("test2", "groceries", new Date(), 13.0, 200),
-                new Bill("test3", "groceries", new Date(), 14.0, 150),
-                new Bill("test4", "groceries", new Date(), 16.0, 139),
-                new Bill("test5", "groceries", new Date(), 17.0, 59)
+                new Bill("Housing", "groceries", new Date(), 15.0, 27),
+                new Bill("Transportation", "groceries", new Date(), 13.0, 200),
+                new Bill("Food", "groceries", new Date(), 14.0, 150),
+                new Bill("Health", "groceries", new Date(), 16.0, 139),
+                new Bill("Other", "groceries", new Date(), 17.0, 59)
         );
         Log.d(TAG, "onCreate: " + billsDao.getAllBills());
 
